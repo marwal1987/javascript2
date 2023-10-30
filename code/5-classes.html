@@ -3,10 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Classes</title>
+    <title>Classes "Extrauppgift"</title>
   </head>
   <body>
     <h2>Open in browser console to see output</h2>
+    <h3>
+      Try to convert all of the tasks in here to use a Person and Dog class.
+      <br />
+      Build upon the Person class; <br />
+      - Write a function in the Person class which prints the name and age of
+      the person when invoked.
+    </h3>
     <script>
       // Objects allow you to store data and functions. Unlike arrays,
       // they are not ordered, and so do not use indexes at all for
@@ -25,19 +32,33 @@
       // your age as a number.
       const person = {
         studentAt: "Chas",
+        name: "Martin",
+        age: 35,
+        favoriteFoods: [
+          "Pizza",
+          "Vegetablesoup with toast",
+          "Pasta Bolognese",
+          "Grilled meat with Coleslaw",
+          "Sallad",
+        ],
       };
 
       console.log(person);
 
       // Task 2: Add a fourth property to the object using the key `favoriteFoods`. Its value
       // should be an array of strings with some foods you like.
+      //DONE!
 
       // Task 3: Use the dot notation to print the name and age properties from the person
       // object using console.log.
 
+      console.log(`My name is ${person.name} and I'm ${person.age} years old.`);
+
       // Task 4: You can add a property to an object using the dot notation and using assignment to
       // set a its value. Do this to add a new property to the person object with the key `eyeColor`
       // and value being a string with the color of your eyes.
+      person.eyecolor = "Brown";
+      console.log(person);
 
       // Task 5: Objects can be nested within other objects. To fetch a value, you must chain
       // the dot notation. For example, you could select the entire `adult` object from the
@@ -53,6 +74,8 @@
           },
         },
       };
+
+      console.log(dogs.labrador.puppy.name);
     </script>
   </body>
 </html>
