@@ -6,7 +6,7 @@
     <title>Classes "Extrauppgift"</title>
   </head>
   <body>
-    <h2>!WORK IN PROGRESS! <br />Open in browser console to see output</h2>
+    <h2>Open in browser console to see output</h2>
     <h3>
       Try to convert all of the tasks in here to use a Person and Dog class.
       <br />
@@ -30,20 +30,37 @@
       // value. Add two more properties (keys and values) to the object; one called name which
       // should store your name as a string, and one called age which should store
       // your age as a number.
-      const person = {
-        studentAt: "Chas",
-        name: "Martin",
-        age: 35,
-        favoriteFoods: [
-          "Pizza",
-          "Vegetablesoup with toast",
-          "Pasta Bolognese",
-          "Grilled meat with Coleslaw",
-          "Sallad",
-        ],
-      };
+      class Person {
+        constructor(name, age) {
+          this.name = name;
+          this.age = age;
+        }
+        getName() {
+          return this.name;
+        }
+        getAge() {
+          return this.age;
+        }
+      }
+      const newPerson = new Person("Martin", 35);
+      console.log(`Name: ${newPerson.getName()} Age: ${newPerson.getAge()}`);
 
-      console.log(person);
+      // const newPerson2 = new Person("Kalle", 55);
+
+      // const person = {
+      //   studentAt: "Chas",
+      //   name: "Martin",
+      //   age: 35,
+      //   favoriteFoods: [
+      //     "Pizza",
+      //     "Vegetablesoup with toast",
+      //     "Pasta Bolognese",
+      //     "Grilled meat with Coleslaw",
+      //     "Sallad",
+      //   ],
+      // };
+
+      // console.log(person);
 
       // Task 2: Add a fourth property to the object using the key `favoriteFoods`. Its value
       // should be an array of strings with some foods you like.
@@ -52,30 +69,30 @@
       // Task 3: Use the dot notation to print the name and age properties from the person
       // object using console.log.
 
-      console.log(`My name is ${person.name} and I'm ${person.age} years old.`);
+      // console.log(`My name is ${person.name} and I'm ${person.age} years old.`);
 
       // Task 4: You can add a property to an object using the dot notation and using assignment to
       // set a its value. Do this to add a new property to the person object with the key `eyeColor`
       // and value being a string with the color of your eyes.
-      person.eyecolor = "Brown";
-      console.log(person);
+      // person.eyecolor = "Brown";
+      // console.log(person);
 
       // Task 5: Objects can be nested within other objects. To fetch a value, you must chain
       // the dot notation. For example, you could select the entire `adult` object from the
       // `dog` object below using the notation `dog.labrador.adult`. Using the dog object below,
       // use console.log() to print the name of the puppy (so it should print "Buster").
-      const dogs = {
-        labrador: {
-          adult: {
-            name: "Marley",
-          },
-          puppy: {
-            name: "Buster",
-          },
-        },
-      };
+      // const dogs = {
+      //   labrador: {
+      //     adult: {
+      //       name: "Marley",
+      //     },
+      //     puppy: {
+      //       name: "Buster",
+      //     },
+      //   },
+      // };
 
-      console.log(dogs.labrador.puppy.name);
+      // console.log(dogs.labrador.puppy.name);
     </script>
   </body>
 </html>
