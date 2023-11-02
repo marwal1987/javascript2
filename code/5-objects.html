@@ -27,13 +27,6 @@
         studentAt: "Chas",
         name: "Martin",
         age: 35,
-        favoriteFoods: [
-          "Pizza",
-          "Vegetablesoup with toast",
-          "Pasta Bolognese",
-          "Grilled meat with Coleslaw",
-          "Sallad",
-        ],
       };
 
       console.log(person);
@@ -41,7 +34,14 @@
       // Task 2: Add a fourth property to the object using the key `favoriteFoods`. Its value
       // should be an array of strings with some foods you like.
 
-      // Jag la till favoritefoods i koden ovanför.
+      person.favoriteFoods = [
+        "Pizza",
+        "Vegetablesoup with toast",
+        "Pasta Bolognese",
+        "Grilled meat with Coleslaw",
+        "Sallad",
+      ];
+      console.log(person);
 
       // Task 3: Use the dot notation to print the name and age properties from the person
       // object using console.log.
